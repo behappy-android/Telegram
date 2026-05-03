@@ -1,39 +1,110 @@
-## Telegram messenger for Android
+# BeHappy for Android
 
-[Telegram](https://telegram.org) is a messaging app with a focus on speed and security. It’s superfast, simple and free.
-This repo contains the official source code for [Telegram App for Android](https://play.google.com/store/apps/details?id=org.telegram.messenger).
+Android client for the [BeHappy](https://behappy.rest) messaging service.
 
-## Creating your Telegram Application
+> **This project is a fork of [Telegram for Android](https://github.com/DrKLO/Telegram).**
+> It is licensed under [GPL v2 (or later)](LICENSE), the same terms as
+> the upstream project. We are grateful to the Telegram for Android
+> Authors for their work — without it this fork would not exist.
+>
+> BeHappy for Android is **not affiliated with, endorsed by, or
+> sponsored by Telegram FZ-LLC**. It connects to BeHappy servers, not
+> Telegram servers, and cannot be used to access Telegram accounts.
 
-We welcome all developers to use our API and source code to create applications on our platform.
-There are several things we require from **all developers** for the moment.
+[![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](LICENSE)
+[![Upstream](https://img.shields.io/badge/forked%20from-Telegram--Android-orange.svg)](https://github.com/DrKLO/Telegram)
 
-1. [**Obtain your own api_id**](https://core.telegram.org/api/obtaining_api_id) for your application.
-2. Please **do not** use the name Telegram for your app — or make sure your users understand that it is unofficial.
-3. Kindly **do not** use our standard logo (white paper plane in a blue circle) as your app's logo.
-3. Please study our [**security guidelines**](https://core.telegram.org/mtproto/security_guidelines) and take good care of your users' data and privacy.
-4. Please remember to publish **your** code too in order to comply with the licences.
+---
 
-### API, Protocol documentation
+## What this is
 
-Telegram API manuals: https://core.telegram.org/api
+BeHappy for Android is the official Android client for the BeHappy
+messenger. It is built on top of the Telegram for Android codebase
+under GPL v2, with the following high-level modifications:
 
-MTproto protocol manuals: https://core.telegram.org/mtproto
+- Networking layer rewritten to use the **MVSy 1.0** protocol and
+  connect to BeHappy backend servers (instead of MTProto 2.0 / Telegram
+  DCs).
+- Branding, visual identity, and product naming replaced throughout.
+- Telegram-specific features removed where not applicable to BeHappy
+  (e.g., Telegram Premium subscriptions, Telegram Stars, Fragment
+  integration, sponsored messages).
+- Additional features added that are unique to BeHappy.
 
-### Compilation Guide
+The complete list of changes from upstream is tracked in
+[`CHANGELOG.md`](CHANGELOG.md).
 
-**Note**: In order to support [reproducible builds](https://core.telegram.org/reproducible-builds), this repo contains dummy release.keystore,  google-services.json and filled variables inside BuildVars.java. Before publishing your own APKs please make sure to replace all these files with your own.
+## Relationship to upstream
 
-You will require Android Studio 3.4, Android NDK rev. 20 and Android SDK 8.1
+| | Telegram for Android | BeHappy for Android |
+|---|---|---|
+| License | GPL v2 (or later) | GPL v2 (or later) — same |
+| Backend | Telegram DCs | BeHappy servers (`mvsy.behappy.rest`) |
+| Protocol | MTProto 2.0 | MVSy 1.0 |
+| Trademarks | Telegram | BeHappy |
+| Account compatibility | Telegram accounts | BeHappy accounts (separate system) |
+| Source repository | [DrKLO/Telegram](https://github.com/DrKLO/Telegram) | [behappy-android/Telegram](https://github.com/behappy-android/Telegram) |
+| Package id | `org.telegram.messenger` | `rest.behappy.android` |
 
-1. Download the Telegram source code from https://github.com/DrKLO/Telegram ( git clone https://github.com/DrKLO/Telegram.git )
-2. Copy your release.keystore into TMessagesProj/config
-3. Fill out RELEASE_KEY_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_STORE_PASSWORD in gradle.properties to access your  release.keystore
-4.  Go to https://console.firebase.google.com/, create two android apps with application IDs org.telegram.messenger and org.telegram.messenger.beta, turn on firebase messaging and download google-services.json, which should be copied to the same folder as TMessagesProj.
-5. Open the project in the Studio (note that it should be opened, NOT imported).
-6. Fill out values in TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java – there’s a link for each of the variables showing where and which data to obtain.
-7. You are ready to compile Telegram.
+We do **not** merge updates from upstream automatically. The fork is
+independently maintained.
 
-### Localization
+## Compliance with upstream README requirements
 
-We moved all translations to https://translations.telegram.org/en/android/. Please use it.
+The upstream Telegram-Android README requests the following:
+
+| Upstream request | Status in this fork |
+|---|---|
+| Obtain your own api_id | N/A — BeHappy uses MVSy 1.0, not MTProto |
+| Don't use the name "Telegram" | ✅ Rebranded to BeHappy |
+| Don't use Telegram's logo | ✅ Independent BeHappy logo |
+| Follow security guidelines | ✅ Adopted from upstream |
+| Publish your code | ✅ This repository is public |
+
+## Downloads
+
+The latest BeHappy for Android builds are available at:
+
+- Direct APK: <https://behappy.rest/android>
+- Source release archives: <https://github.com/behappy-android/Telegram/releases>
+
+For Telegram for Android (the upstream project) please visit
+[the upstream repository](https://github.com/DrKLO/Telegram).
+
+## Building from source
+
+Build instructions are inherited from upstream. The only change is
+configuration:
+
+1. Use the BeHappy backend endpoint instead of Telegram DCs (configured
+   in the resources).
+2. Bundle the BeHappy app icon and resources in place of Telegram's.
+
+See the upstream repository for the original build instructions.
+
+## License
+
+BeHappy for Android is free software: you can redistribute it and/or
+modify it under the terms of the **GNU General Public License v2 (or
+any later version)** as published by the Free Software Foundation.
+
+- Full license text: [LICENSE](LICENSE)
+- Attribution and trademark notice: [NOTICE](NOTICE)
+
+By contributing to this repository, you agree that your contributions
+will be licensed under the same terms.
+
+## Trademarks
+
+"Telegram" is a trademark of Telegram FZ-LLC. It is used in this README
+and in source code copyright headers solely to identify the upstream
+project from which this fork is derived, as required by GPL §1. It is
+**not** used as a trademark of this product.
+
+"BeHappy" is a trademark of the BeHappy Android Authors.
+
+## Contact
+
+- General: <https://behappy.rest>
+- Source code questions: open an issue on this repository
+- License compliance / DMCA: <legal@behappy.rest>
