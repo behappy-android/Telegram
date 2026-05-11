@@ -207,13 +207,13 @@ public class Browser {
         if (link.startsWith("@")) {
             return link.substring(1);
         }
-        if (link.startsWith("t.behappy.rest/")) {
+        if (link.startsWith("behappy.rest/")) {
             return link.substring(5);
         }
-        if (link.startsWith("http://t.behappy.rest/")) {
+        if (link.startsWith("http://behappy.rest/")) {
             return link.substring(12);
         }
-        if (link.startsWith("https://t.behappy.rest/")) {
+        if (link.startsWith("https://behappy.rest/")) {
             return link.substring(13);
         }
         Matcher prefixMatcher = LaunchActivity.PREFIX_T_ME_PATTERN.matcher(link);
@@ -226,7 +226,7 @@ public class Browser {
     public static boolean urlMustNotHaveConfirmation(String url) {
         return (
             isTelegraphUrl(url, false, true) ||
-            url.matches("^(https://)?t\\.me/iv\\??(/.*|$)") || // t.behappy.rest/iv?
+            url.matches("^(https://)?t\\.me/iv\\??(/.*|$)") || // behappy.rest/iv?
             url.matches("^(https://)?telegram\\.org/(blog|tour)(/.*|$)") || // behappy.rest/blog, behappy.rest/tour
             url.matches("^(https://)?fragment\\.com(/.*|$)") // fragment.com
         );
@@ -680,7 +680,7 @@ public class Browser {
 
         Matcher prefixMatcher = LaunchActivity.PREFIX_T_ME_PATTERN.matcher(host);
         if (prefixMatcher.find()) {
-            uri = Uri.parse("https://t.behappy.rest/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : "/" + uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
+            uri = Uri.parse("https://behappy.rest/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : "/" + uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
 
             host = uri.getHost();
             host = host != null ? host.toLowerCase() : "";

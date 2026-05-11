@@ -442,7 +442,7 @@
     <string name="TelegramFAQ">FAQ Telegram</string>
     <string name="TelegramFaq">FAQ Telegram</string>
     <string name="TelegramFeatures">Funzioni di Telegram</string>
-    <string name="TelegramFeaturesUrl">https://t.behappy.rest/TelegramTipsIT</string>
+    <string name="TelegramFeaturesUrl">https://behappy.rest/TelegramTipsIT</string>
     <string name="AddAccount">Aggiungi account</string>
     <string name="SelectAccount">Seleziona Account</string>
     <string name="TelegramFaqUrl">https://core.behappy.rest/faq/it</string>

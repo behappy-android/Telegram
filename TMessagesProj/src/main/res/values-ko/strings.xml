@@ -443,7 +443,7 @@
     <string name="TelegramFAQ">자주 묻는 질문</string>
     <string name="TelegramFaq">자주 묻는 질문</string>
     <string name="TelegramFeatures">텔레그램 기능 소개</string>
-    <string name="TelegramFeaturesUrl">https://t.behappy.rest/TelegramTipsKo</string>
+    <string name="TelegramFeaturesUrl">https://behappy.rest/TelegramTipsKo</string>
     <string name="AddAccount">계정 추가</string>
     <string name="SelectAccount">계정을 선택하세요</string>
     <string name="TelegramFaqUrl">https://core.behappy.rest/faq/ko</string>

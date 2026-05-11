@@ -1755,7 +1755,7 @@ public abstract class BotWebViewContainer extends FrameLayout implements Notific
                     if (pathFull.startsWith("/")) {
                         pathFull = pathFull.substring(1);
                     }
-                    onOpenUri(Uri.parse("https://t.behappy.rest/" + pathFull), null, false, true, force_request);
+                    onOpenUri(Uri.parse("https://behappy.rest/" + pathFull), null, false, true, force_request);
                 } catch (JSONException e) {
                     FileLog.e(e);
                 }

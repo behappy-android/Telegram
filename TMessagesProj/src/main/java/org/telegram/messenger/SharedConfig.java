@@ -407,7 +407,7 @@ public class SharedConfig {
         }
 
         public String getLink() {
-            StringBuilder url = new StringBuilder(!TextUtils.isEmpty(secret) ? "https://t.behappy.rest/proxy?" : "https://t.behappy.rest/socks?");
+            StringBuilder url = new StringBuilder(!TextUtils.isEmpty(secret) ? "https://behappy.rest/proxy?" : "https://behappy.rest/socks?");
             try {
                 url.append("server=").append(URLEncoder.encode(address, "UTF-8")).append("&").append("port=").append(port);
                 if (!TextUtils.isEmpty(username)) {

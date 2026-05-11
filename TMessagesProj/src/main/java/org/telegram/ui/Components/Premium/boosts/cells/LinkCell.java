@@ -66,8 +66,8 @@ public class LinkCell extends FrameLayout {
 
     public void setSlug(String slug) {
         this.slug = slug;
-        this.link = "https://t.behappy.rest/giftcode/" + slug;
-        linkView.setText("t.behappy.rest/giftcode/" + slug);
+        this.link = "https://behappy.rest/giftcode/" + slug;
+        linkView.setText("behappy.rest/giftcode/" + slug);
     }
 
     public void hideSlug(Runnable onHiddenLinkClicked) {
@@ -75,7 +75,7 @@ public class LinkCell extends FrameLayout {
         linkView.setPadding(AndroidUtilities.dp(18), AndroidUtilities.dp(14), AndroidUtilities.dp(14), AndroidUtilities.dp(18));
         TextStyleSpan.TextStyleRun run = new TextStyleSpan.TextStyleRun();
         run.flags |= TextStyleSpan.FLAG_STYLE_SPOILER;
-        SpannableStringBuilder builder = new SpannableStringBuilder("t.behappy.rest/giftcode/" + slug);
+        SpannableStringBuilder builder = new SpannableStringBuilder("behappy.rest/giftcode/" + slug);
         if (slug == null) {
             String stub = "1234567891011123654897566536223";
             builder.append(stub);

@@ -308,7 +308,7 @@ public class BusinessLinksController {
             TL_account.TL_businessChatLink chatLink = links.get(i);
             if (TextUtils.equals(chatLink.link, slug) ||
                     TextUtils.equals(chatLink.link, "https://" + slug) ||
-                    TextUtils.equals(chatLink.link, "https://t.behappy.rest/m/" + slug) ||
+                    TextUtils.equals(chatLink.link, "https://behappy.rest/m/" + slug) ||
                     TextUtils.equals(chatLink.link, "tg://message?slug=" + slug)) {
                 return chatLink;
             }

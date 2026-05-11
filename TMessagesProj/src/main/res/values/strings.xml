@@ -1444,7 +1444,7 @@
     <string name="GroupEmptyTitle2">Groups can have:</string>
     <string name="GroupDescription1">Up to 200,000 members</string>
     <string name="GroupDescription2">Persistent chat history</string>
-    <string name="GroupDescription3">Public links such as t.behappy.rest/title</string>
+    <string name="GroupDescription3">Public links such as behappy.rest/title</string>
     <string name="GroupDescription4">Admins with different rights</string>
     <string name="ChatYourSelfDescription1">Forward messages here to save them</string>
     <string name="ChatYourSelfDescription2">Send media and files to store them</string>
@@ -2421,7 +2421,7 @@
     <string name="TelegramFAQ">Telegram FAQ</string>
     <string name="TelegramFaq">Telegram FAQ</string>
     <string name="TelegramFeatures">Telegram Features</string>
-    <string name="TelegramFeaturesUrl">https://t.behappy.rest/TelegramTips</string>
+    <string name="TelegramFeaturesUrl">https://behappy.rest/TelegramTips</string>
     <string name="AddAccount">Add Account</string>
     <string name="SwitchAccountHint">"Long tap to switch accounts"</string>
     <string name="SelectAccount">Select Account</string>
@@ -5581,7 +5581,7 @@
     <string name="PinChatsLimitTitle">Pinned Chats</string>
     <string name="PinChatsLimitSubtitle">Pin up to %d chats in your main chat list</string>
     <string name="PublicLinksLimitTitle">Public Links</string>
-    <string name="PublicLinksLimitSubtitle">Reserve up to %d t.behappy.rest/name links</string>
+    <string name="PublicLinksLimitSubtitle">Reserve up to %d behappy.rest/name links</string>
     <string name="SavedGifsLimitTitle">Saved GIFs</string>
     <string name="SavedGifsLimitSubtitle">Save up to %d GIFs in your Favorite GIFs</string>
     <string name="FavoriteStickersLimitTitle">Favorite Stickers</string>
@@ -10371,14 +10371,14 @@
     <string name="CocoonSubtitle">Cocoon (**Co**nfidential **Co**mpute **O**pen **N**etwork)\nhandles AI tasks safely and efficiently.</string>
     <string name="CocoonFeature1Title">Private</string>
     <string name="CocoonFeature1Text">No third party can access any data, such as translations, inside **@cocoon**</string>
-    <string name="CocoonFeature1TextLink">https://t.behappy.rest/cocoon</string>
+    <string name="CocoonFeature1TextLink">https://behappy.rest/cocoon</string>
     <string name="CocoonFeature2Title">Efficient</string>
     <string name="CocoonFeature2Text">Cocoon has allowed Telegram to reduce translation cost by 6x.</string>
     <string name="CocoonFeature3Title">For Everyone</string>
     <string name="CocoonFeature3Text">Any developer can use Cocoon for AI features. Learn more at **cocoon.org**</string>
     <string name="CocoonFeature3TextLink">https://cocoon.org/</string>
-    <string name="CocoonFooter">Want to integrate Cocoon into your projects?\nReach out at **t.behappy.rest/cocoon?direct**</string>
-    <string name="CocoonFooterLink">https://t.behappy.rest/cocoon?direct</string>
+    <string name="CocoonFooter">Want to integrate Cocoon into your projects?\nReach out at **behappy.rest/cocoon?direct**</string>
+    <string name="CocoonFooterLink">https://behappy.rest/cocoon?direct</string>
     <string name="SummaryTitle">AI Summary</string>
     <string name="SummarySubtitle">Tap to see original text</string>
     <string name="SummaryLimit">Summarize large messages with AI — unlimited in Telegram Premium.</string>

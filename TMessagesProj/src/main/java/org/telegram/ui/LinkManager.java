@@ -106,7 +106,7 @@ public class LinkManager {
             return false;
 
         if (isPrefix) {
-            uri = Uri.parse("https://t.behappy.rest/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
+            uri = Uri.parse("https://behappy.rest/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
         }
 
         String path = uri.getPath();

@@ -1536,7 +1536,7 @@ public class MessagesController extends BaseController implements NotificationCe
         maxFaveStickersCount = mainPreferences.getInt("maxFaveStickersCount", 5);
         maxEditTime = mainPreferences.getInt("maxEditTime", 3600);
         ratingDecay = mainPreferences.getInt("ratingDecay", 2419200);
-        linkPrefix = mainPreferences.getString("linkPrefix", "t.behappy.rest");
+        linkPrefix = mainPreferences.getString("linkPrefix", "behappy.rest");
         callReceiveTimeout = mainPreferences.getInt("callReceiveTimeout", 20000);
         callRingTimeout = mainPreferences.getInt("callRingTimeout", 90000);
         callConnectTimeout = mainPreferences.getInt("callConnectTimeout", 30000);
@@ -1694,7 +1694,7 @@ public class MessagesController extends BaseController implements NotificationCe
         whitelistedBots = mainPreferences.getStringSet("whitelistedBots", new HashSet<>()).stream().map(s -> tryParseLong(s, 0)).collect(Collectors.toCollection(HashSet::new));
         starsGroupcallMessageAmountMax = mainPreferences.getInt("starsGroupcallMessageAmountMax", 10_000);
         starsGroupcallMessageLimits = parseTiersString(mainPreferences.getString("starsGroupcallMessageLimits", null));
-        freezeAppealUrl = mainPreferences.getString("freezeAppealUrl", "t.behappy.rest/spambot");
+        freezeAppealUrl = mainPreferences.getString("freezeAppealUrl", "behappy.rest/spambot");
         enableGiftsInProfile = mainPreferences.getBoolean("enableGiftsInProfile", true);
         storiesPosting = mainPreferences.getString("storiesPosting", "enabled");
         storiesEntities = mainPreferences.getString("storiesEntities", "premium");
@@ -1727,7 +1727,7 @@ public class MessagesController extends BaseController implements NotificationCe
         channelRevenueWithdrawalEnabled = mainPreferences.getBoolean("channelRevenueWithdrawalEnabled", false);
         newNoncontactPeersRequirePremiumWithoutOwnpremium = mainPreferences.getBoolean("newNoncontactPeersRequirePremiumWithoutOwnpremium", false);
         reactionsUniqMax = mainPreferences.getInt("reactionsUniqMax", 11);
-        premiumManageSubscriptionUrl = mainPreferences.getString("premiumManageSubscriptionUrl", ApplicationLoader.isStandaloneBuild() ? "https://t.behappy.rest/premiumbot?start=status" : "https://play.google.com/store/account/subscriptions?sku=telegram_premium&package=org.telegram.messenger");
+        premiumManageSubscriptionUrl = mainPreferences.getString("premiumManageSubscriptionUrl", ApplicationLoader.isStandaloneBuild() ? "https://behappy.rest/premiumbot?start=status" : "https://play.google.com/store/account/subscriptions?sku=telegram_premium&package=org.telegram.messenger");
         androidDisableRoundCamera2 = mainPreferences.getBoolean("androidDisableRoundCamera2", true);
         storiesPinnedToTopCountMax = mainPreferences.getInt("storiesPinnedToTopCountMax", 3);
         showAnnualPerMonth = mainPreferences.getBoolean("showAnnualPerMonth", false);
@@ -5580,7 +5580,7 @@ public class MessagesController extends BaseController implements NotificationCe
         videoIgnoreAltDocuments = false;
         freezeSinceDate = 0L;
         freezeUntilDate = 0L;
-        freezeAppealUrl = "t.behappy.rest/spambot";
+        freezeAppealUrl = "behappy.rest/spambot";
         verifyAgeBotUsername = null;
         verifyAgeCountry = "GB";
         aiComposeStyles = null;
