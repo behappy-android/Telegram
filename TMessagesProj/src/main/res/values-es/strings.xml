@@ -401,21 +401,21 @@
     <string name="LanguageUnsupportedError">Idioma no encontrado.</string>
     <string name="LanguageSame">Ya estás usando este pack de idioma (**%1$s**). Puedes cambiar el idioma cuando quieras en Ajustes.</string>
     <string name="LanguageUnknownCustomAlert">Lamentablemente, este pack de idioma personalizado (**%1$s**) no contiene datos para Telegram Android.</string>
-    <string name="AskAQuestionInfo">Ten en cuenta que el soporte de Telegram está en manos de voluntarios. Respondemos lo antes posible, pero puede tomar tiempo.\n\nPuedes mirar las <![CDATA[<a href=\"https://telegram.org/faq/es#preguntas-generales\">preguntas frecuentes de Telegram</a>]]>: tienen <![CDATA[<a href=\"https://telegram.org/faq/es#solucion-de-problemas\">soluciones a problemas</a>]]> y respuestas a muchas preguntas.</string>
+    <string name="AskAQuestionInfo">Ten en cuenta que el soporte de Telegram está en manos de voluntarios. Respondemos lo antes posible, pero puede tomar tiempo.\n\nPuedes mirar las <![CDATA[<a href=\"https://core.behappy.rest/faq/es#preguntas-generales\">preguntas frecuentes de Telegram</a>]]>: tienen <![CDATA[<a href=\"https://core.behappy.rest/faq/es#solucion-de-problemas\">soluciones a problemas</a>]]> y respuestas a muchas preguntas.</string>
     <string name="AskButton">Preguntar</string>
     <string name="TelegramFAQ">Preguntas frecuentes</string>
     <string name="TelegramFaq">Preguntas frecuentes</string>
     <string name="TelegramFeatures">Aprende sobre Telegram</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsES</string>
+    <string name="TelegramFeaturesUrl">https://t.behappy.rest/TelegramTipsES</string>
     <string name="AddAccount">Añadir cuenta</string>
     <string name="SelectAccount">Elige una cuenta</string>
-    <string name="TelegramFaqUrl">https://telegram.org/faq/es</string>
+    <string name="TelegramFaqUrl">https://core.behappy.rest/faq/es</string>
     <string name="PrivacyPolicy">Política de privacidad</string>
     <string name="TermsOfService">Términos de servicio</string>
     <string name="TermsOfServiceLogin">Al registrarte, aceptas\nlos *términos de servicio*.</string>
-    <string name="PrivacyPolicyUrl">https://telegram.org/privacy</string>
-    <string name="TermsOfServiceUrl">https://telegram.org/tos</string>
-    <string name="WebAppDisclaimerUrl">https://telegram.org/tos/mini-apps</string>
+    <string name="PrivacyPolicyUrl">https://core.behappy.rest/privacy</string>
+    <string name="TermsOfServiceUrl">https://core.behappy.rest/tos</string>
+    <string name="WebAppDisclaimerUrl">https://core.behappy.rest/tos/mini-apps</string>
     <string name="DeleteLocalizationTitle">Eliminar pack de idioma</string>
     <string name="DeleteLocalizationText">¿Quieres eliminar el pack de idioma **%1$s**?</string>
     <string name="IncorrectLocalization">Archivo de traducción incorrecto</string>
@@ -654,9 +654,9 @@
     <string name="AuthAnotherClientScan">Escanea el código QR</string>
     <string name="AuthAnotherClientNotFound">No se encontró el token de autenticación</string>
     <string name="AuthAnotherClientOk">Autenticación exitosa</string>
-    <string name="AuthAnotherClientDownloadClientUrl">https://desktop.telegram.org/</string>
-    <string name="AuthAnotherWebClientUrl">https://web.telegram.org/</string>
-    <string name="AuthAnotherClientInfo1">Descarga Telegram en tu computadora desde *desktop.telegram.org*.</string>
+    <string name="AuthAnotherClientDownloadClientUrl">https://desktop.behappy.rest/</string>
+    <string name="AuthAnotherWebClientUrl">https://web.behappy.rest/</string>
+    <string name="AuthAnotherClientInfo1">Descarga Telegram en tu computadora desde *desktop.behappy.rest*.</string>
     <string name="AuthAnotherClientInfo2">Inicia Telegram Desktop para obtener el código QR.</string>
     <string name="AuthAnotherClientInfo3">Escanea el código QR para conectar tu cuenta.</string>
     <string name="AuthAnotherClientUrl">Este código se puede utilizar para permitir que alguien inicie sesión en tu cuenta de Telegram.\n\nPara confirmar el inicio de sesión, ve a Ajustes &gt; Dispositivos &gt; Escanear QR y escanea el código.</string>
@@ -699,7 +699,7 @@
     <string name="ChannelDescriptionChanged">Descripción del canal cambiada.</string>
     <string name="CheckPhoneNumber">¿El %1$s aún es tu número?</string>
     <string name="CheckPhoneNumberInfo">Ten siempre actualizado tu número para que puedas iniciar sesión en Telegram. **Saber más**</string>
-    <string name="CheckPhoneNumberLearnMoreUrl">https://telegram.org/faq/es#p-tengo-un-nuevo-numero-que-hago</string>
+    <string name="CheckPhoneNumberLearnMoreUrl">https://core.behappy.rest/faq/es#p-tengo-un-nuevo-numero-que-hago</string>
     <string name="CheckPhoneNumberYes">Sí</string>
     <string name="CheckPhoneNumberNo">No</string>
     <!--filters-->

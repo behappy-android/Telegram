@@ -244,7 +244,7 @@ public class WebviewActivity extends BaseFragment {
                 if ("tg".equals(uri.getScheme())) {
                     if (type == TYPE_STAT) {
                         try {
-                            uri = Uri.parse(url.replace("tg:statsrefresh", "tg://telegram.org"));
+                            uri = Uri.parse(url.replace("tg:statsrefresh", "tg://behappy.rest"));
                             reloadStats(uri.getQueryParameter("params"));
                         } catch (Throwable e) {
                             FileLog.e(e);

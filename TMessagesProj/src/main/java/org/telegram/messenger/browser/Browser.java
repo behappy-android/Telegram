@@ -195,9 +195,9 @@ public class Browser {
     }
     public static boolean isTelegraphUrl(String url, boolean equals, boolean forceHttps) {
         if (equals) {
-            return url.equals("telegra.ph") || url.equals("te.legra.ph") || url.equals("graph.org");
+            return url.equals("instant-view.behappy.rest") || url.equals("te.legra.ph") || url.equals("graph.org");
         }
-        return url.matches("^(https" + (forceHttps ? "" : "?") + "://)?(te\\.?legra\\.ph|graph\\.org)(/.*|$)"); // telegra.ph, te.legra.ph, graph.org
+        return url.matches("^(https" + (forceHttps ? "" : "?") + "://)?(te\\.?legra\\.ph|graph\\.org)(/.*|$)"); // instant-view.behappy.rest, te.legra.ph, graph.org
     }
 
     public static String extractUsername(String link) {
@@ -207,13 +207,13 @@ public class Browser {
         if (link.startsWith("@")) {
             return link.substring(1);
         }
-        if (link.startsWith("t.me/")) {
+        if (link.startsWith("t.behappy.rest/")) {
             return link.substring(5);
         }
-        if (link.startsWith("http://t.me/")) {
+        if (link.startsWith("http://t.behappy.rest/")) {
             return link.substring(12);
         }
-        if (link.startsWith("https://t.me/")) {
+        if (link.startsWith("https://t.behappy.rest/")) {
             return link.substring(13);
         }
         Matcher prefixMatcher = LaunchActivity.PREFIX_T_ME_PATTERN.matcher(link);
@@ -226,8 +226,8 @@ public class Browser {
     public static boolean urlMustNotHaveConfirmation(String url) {
         return (
             isTelegraphUrl(url, false, true) ||
-            url.matches("^(https://)?t\\.me/iv\\??(/.*|$)") || // t.me/iv?
-            url.matches("^(https://)?telegram\\.org/(blog|tour)(/.*|$)") || // telegram.org/blog, telegram.org/tour
+            url.matches("^(https://)?t\\.me/iv\\??(/.*|$)") || // t.behappy.rest/iv?
+            url.matches("^(https://)?telegram\\.org/(blog|tour)(/.*|$)") || // behappy.rest/blog, behappy.rest/tour
             url.matches("^(https://)?fragment\\.com(/.*|$)") // fragment.com
         );
     }
@@ -307,7 +307,7 @@ public class Browser {
         if (tryTelegraph) {
             try {
                 String host = AndroidUtilities.getHostAuthority(uri);
-                if (UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser() != null && (isTelegraphUrl(host, true) || "telegram.org".equalsIgnoreCase(host) && (uri.toString().toLowerCase().contains("telegram.org/faq") || uri.toString().toLowerCase().contains("telegram.org/privacy") || uri.toString().toLowerCase().contains("telegram.org/blog")))) {
+                if (UserConfig.getInstance(UserConfig.selectedAccount).getCurrentUser() != null && (isTelegraphUrl(host, true) || "behappy.rest".equalsIgnoreCase(host) && (uri.toString().toLowerCase().contains("behappy.rest/faq") || uri.toString().toLowerCase().contains("behappy.rest/privacy") || uri.toString().toLowerCase().contains("behappy.rest/blog")))) {
                     final AlertDialog[] progressDialog = new AlertDialog[] {
                         new AlertDialog(context, AlertDialog.ALERT_TYPE_SPINNER)
                     };
@@ -680,7 +680,7 @@ public class Browser {
 
         Matcher prefixMatcher = LaunchActivity.PREFIX_T_ME_PATTERN.matcher(host);
         if (prefixMatcher.find()) {
-            uri = Uri.parse("https://t.me/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : "/" + uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
+            uri = Uri.parse("https://t.behappy.rest/" + prefixMatcher.group(1) + (TextUtils.isEmpty(uri.getPath()) ? "" : "/" + uri.getPath()) + (TextUtils.isEmpty(uri.getQuery()) ? "" : "?" + uri.getQuery()));
 
             host = uri.getHost();
             host = host != null ? host.toLowerCase() : "";
@@ -699,7 +699,7 @@ public class Browser {
             return true;
         } else if ("tg".equals(uri.getScheme())) {
             return true;
-        } else if ("telegram.dog".equals(host)) {
+        } else if ("behappy.dog".equals(host)) {
             String path = uri.getPath();
             if (path != null && path.length() > 1) {
                 if (all) {
@@ -714,7 +714,7 @@ public class Browser {
                 }
                 return true;
             }
-        } else if ("telegram.me".equals(host) || "t.me".equals(host)) {
+        } else if ("behappy.me".equals(host) || "t.me".equals(host)) {
             String path = uri.getPath();
             if (path != null && path.length() > 1) {
                 if (all) {
@@ -729,10 +729,10 @@ public class Browser {
                 }
                 return true;
             }
-        } else if ("telegram.org".equals(host) && uri != null && uri.getPath() != null && uri.getPath().startsWith("/blog/")) {
+        } else if ("behappy.rest".equals(host) && uri != null && uri.getPath() != null && uri.getPath().startsWith("/blog/")) {
             return true;
         } else if (all) {
-            if (host.endsWith("telegram.org") || host.endsWith("telegra.ph") || host.endsWith("telesco.pe")) {
+            if (host.endsWith("behappy.rest") || host.endsWith("instant-view.behappy.rest") || host.endsWith("instant-view.behappy.rest")) {
                 return true;
             }
         }
